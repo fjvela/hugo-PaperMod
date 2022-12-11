@@ -1,3 +1,7 @@
 {{- /* Footer custom content area start */ -}}
-{{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
+{{- /* Insert any custom code web-analytics, resources, etc. here */ -}}
 {{- /* Footer custom content area end */ -}}
+
+{{- if (and (eq site.Params.env "production") site.Params.umami) }}
+<script async defer data-website-id="{{ site.Params.umami.id }}" src="{{ site.Params.umami.src }}"></script>
+{{- end }}

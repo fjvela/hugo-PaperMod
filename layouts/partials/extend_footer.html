@@ -6,7 +6,6 @@
 <script async defer data-website-id="{{ site.Params.umami.id }}" src="{{ site.Params.umami.src }}"></script>
 {{- end }}
 {{- if (and (eq site.Params.env "production") site.Params.librecounter site.Params.librecounter.enabled) }}
-<a href="https://librecounter.org/referer/show" target="_blank">
-    <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" />
-</a>
+<img decoding="async" loading="eager" fetchPriority="low" src="https://librecounter.org/counter.svg"
+referrerPolicy="unsafe-url" style="width: 1px;height: 1px;" />
 {{- end }}

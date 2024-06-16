@@ -5,3 +5,8 @@
 {{- if (and (eq site.Params.env "production") site.Params.umami) }}
 <script async defer data-website-id="{{ site.Params.umami.id }}" src="{{ site.Params.umami.src }}"></script>
 {{- end }}
+{{- if (and (eq site.Params.env "production") site.Params.librecounter site.Params.librecounter.enabled) }}
+<a href="https://librecounter.org/referer/show" target="_blank">
+    <img src="https://librecounter.org/counter.svg" referrerPolicy="unsafe-url" />
+</a>
+{{- end }}
